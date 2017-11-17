@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        perspective: 800px;
+      }
+
+      #example1{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        /*transform: translate(30px,30px);*/
+        /*transform: rotateX(45deg) rotateY(10deg);*/
+        /*transform: scale(1.2, 1);*/
+        /*transform: skew(2deg ,4deg);*/
+        /*transition: all 0.25s ease;*/
+        /*position: absolute;*/
+      }
+
+      .foo{
+        /*left:0;*/
+        transform : translateX(0px);
+      }
+
+      .bar{
+        /*left:200px;*/
+        transform : translateX(300px);
+      }
+
+    </style>
+  </head>
+  <body>
+    <button id="test" onclick="active()">Activate</button>
+    <div id="example1" class="foo">
+
+    </div>
+    <script>
+        function active(){
+          console.log("Hello");
+          document.getElementById("example1").classList.toggle("bar");
+        }
+    </script>
+  </body>
+</html>
